@@ -15,6 +15,7 @@ class AddNew extends React.Component {
       company: '',
       email: '',
       phone: '',
+      gender: 'male',
       tags: [],
       address: '',
       tagsInputValue: ''
