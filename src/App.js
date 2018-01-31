@@ -21,15 +21,32 @@ class App extends Component {
       peopleData: database.data.push(newPeoples)
     });
 
-    console.log('App got', newPeoples);
-    console.log(database.data);
   };
+
+  onDelete = (thRow) => {
+    this.state.peopleData.splice(thRow.index, 1);
+
+    this.setState({
+      peopleData: this.state.peopleData
+    });
+    console.log(this.state.peopleData);
+  }
+
+  onEdit = (newValue) => {
+    this.setState({
+      peopeleData: database.data.splice(newValue.index, 1, newValue)
+    });
+
+    console.log('App got edit value', newValue );
+  }
 
   render() {
     return (
       <div className="App">
 
-        <ListPeople dataPeople={this.state.peopleData}/>
+        <ListPeople dataPeople={this.state.peopleData}
+          onEdit={newValue => this.onEdit(newValue)}
+          onDelete={thRow => this.onDelete(thRow)}/>
         <AddNew onSubmit={newPeoples => this.onSubmit(newPeoples)} />
       </div>
     );
