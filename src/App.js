@@ -24,11 +24,13 @@ class App extends Component {
   };
 
   onDelete = (thRow) => {
-    this.state.peopleData.splice(thRow.index, 1);
+    const newPeople = this.state.peopleData;
+    newPeople.splice(thRow.id, 1);
 
     this.setState({
-      peopleData: this.state.peopleData
+      peopleData: [].concat(newPeople)
     });
+
     console.log(this.state.peopleData);
   }
 
