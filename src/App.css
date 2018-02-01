@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  position: relative;
 }
 
 .App-logo {
@@ -29,4 +30,13 @@
 
 #PlacesAutocomplete__autocomplete-container {
   z-index: 10;
+}
+
+.ReactFlipCard {
+  display: flex;
+  flex: 0 1 450px;
+  float: left;
+  width: 300px;
+  height: 300px;
+  margin: 30px 0 30px 0;
 }

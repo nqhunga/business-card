@@ -6,9 +6,12 @@
     "bootstrap": "^4.0.0-beta.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-flipcard": "^0.2.1",
+    "react-flipcard-2": "^0.3.2",
     "react-onevent": "^1.0.1",
     "react-places-autocomplete": "^6.0.2",
     "react-scripts": "1.1.0",
+    "react-search-input": "^0.11.3",
     "react-tagsinput": "^3.19.0",
     "reactstrap": "^5.0.0-alpha.4",
     "styled-components": "^2.4.0"

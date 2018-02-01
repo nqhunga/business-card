@@ -5,27 +5,9 @@ import { TableEx, ButtonEx, ButtonGroupEx, InputEx } from './ListPeople.style';
 import RowContainer from './RowContainer';
 import Editable from './Editable';
 
-
 class ListPeople extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      data: this.props.dataPeople,
-      editing: null
-    }
-
-  }
-
-  onSave = (newRow) => {
-    this.props.onEdit(newRow);
-  }
-
-  onDelete = (thisRow) => {
-    this.props.onDelete(thisRow);
-  }
-
   render () {
+    const {people, onSave, onDelete} = this.props;
     return (
       <TableEx responsive hover>
         <thead>
@@ -40,15 +22,19 @@ class ListPeople extends React.Component {
           </tr>
         </thead>
         <tbody>
-          {this.state.data.map((person, index) => (
-            <RowContainer key={index} numList={index} data={person}
-              onSave={newRow => this.onSave(newRow)} onDelete={thisRow => this.onDelete(thisRow)}/>
+          {this.props.people.map(person => (
+            <RowContainer key={person.firstName} data={person}
+              onSave={onSave} onDelete={onDelete}/>
           ))}
         </tbody>
 
       </TableEx>
     );
   }
+}
+
+ListPeople.propTypes = {
+  // Add proptypes here for validation
 }
 
 export default ListPeople;

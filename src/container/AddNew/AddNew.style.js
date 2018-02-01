@@ -2,7 +2,7 @@ import { Button, Form, FormGroup, Label, Input, FormText, Col } from 'reactstrap
 import styled from 'styled-components';
 
 export const FormEx = styled(Form)`
-
+  
 `;
 
 export const ButtonEx = styled(Button)`

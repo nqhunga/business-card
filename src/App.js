@@ -3,6 +3,7 @@ import database from './database';
 import './App.css';
 import ListPeople from './container/ListPeople/ListPeople';
 import AddNew from './container/AddNew/AddNew';
+import CardContainer from './container/Card/CardContainer';
 
 class App extends Component {
 
@@ -16,7 +17,6 @@ class App extends Component {
   }
 
   onSubmit = (newPeoples) => {
-
     this.setState({
       peopleData: database.data.push(newPeoples)
     });
@@ -24,30 +24,28 @@ class App extends Component {
   };
 
   onDelete = (thRow) => {
-    const newPeople = this.state.peopleData;
-    newPeople.splice(thRow.id, 1);
-
+    const newPeople = [].concat(this.state.peopleData);
+    let index = newPeople.findIndex(x => x.firstName === thRow.firstName);
+    newPeople.splice(index, 1);
     this.setState({
-      peopleData: [].concat(newPeople)
-    });
+      peopleData: newPeople
+    }, () => console.log(index));
 
-    console.log(this.state.peopleData);
   }
 
   onEdit = (newValue) => {
+    const newPeople = [].concat(this.state.peopleData);
     this.setState({
-      peopeleData: database.data.splice(newValue.index, 1, newValue)
+      peopeleData: database.data.splice(newPeople.indexOf(newValue), 1, newValue)
     });
-
-    console.log('App got edit value', newValue );
   }
 
   render() {
     return (
       <div className="App">
-
-        <ListPeople dataPeople={this.state.peopleData}
-          onEdit={newValue => this.onEdit(newValue)}
+        <CardContainer people={this.state.peopleData} />
+        <ListPeople people={this.state.peopleData}
+          onSave={newValue => this.onEdit(newValue)}
           onDelete={thRow => this.onDelete(thRow)}/>
         <AddNew onSubmit={newPeoples => this.onSubmit(newPeoples)} />
       </div>

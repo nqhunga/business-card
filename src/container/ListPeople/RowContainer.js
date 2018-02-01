@@ -21,7 +21,6 @@ class RowContainer extends React.Component {
       address: this.props.data.address,
       gender: this.props.data.gender,
       isEditing: false,
-      index: this.props.numList
     }
     this.change = this.change.bind(this);
     this.onChange = (address) => this.setState({ address });
@@ -50,6 +49,7 @@ class RowContainer extends React.Component {
     this.setState({
       isEditing: false
     });
+
   }
 
   onDelete = e => {
@@ -178,7 +178,7 @@ class RowContainer extends React.Component {
 
   render () {
     return (
-      <tr>
+      <tr key={this.state.firstName}>
         { this.renderRow(this.state.isEditing) }
       </tr>
     )
