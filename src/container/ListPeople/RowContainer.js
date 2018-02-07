@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { TableEx, ButtonEx, ButtonGroupEx, InputEx } from './ListPeople.style';
 import PlacesAutocomplete from 'react-places-autocomplete'
-
+import emailPropTypes from 'email-prop-type';
 
 
 class RowContainer extends React.Component {
@@ -20,6 +20,8 @@ class RowContainer extends React.Component {
       city: this.props.data.city,
       address: this.props.data.address,
       gender: this.props.data.gender,
+      about: this.props.data.about,
+      tags: this.props.data.tags,
       isEditing: false,
     }
     this.change = this.change.bind(this);
@@ -184,8 +186,6 @@ class RowContainer extends React.Component {
     )
 
   }
-
-
 }
 
 export default RowContainer;

@@ -11,7 +11,7 @@ class CardContainer extends React.Component {
     return (
       <CardDeckEx>
         {this.props.people.map(person => (
-          <Card key={person.firstName} data={person} />
+          <Card key={person.email} data={person} />
         ))}
       </CardDeckEx>
     )

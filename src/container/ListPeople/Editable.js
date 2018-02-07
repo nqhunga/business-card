@@ -17,6 +17,8 @@ class Editable extends React.Component {
       phone: this.props.person.phone,
       address: `${this.props.person.street} ${this.props.person.state} ${this.props.person.city}`,
       gender: this.props.person.gender,
+      about: this.props.person.about,
+      tags: this.props.person.tags,
       index: this.props.index
     }
     this.onChange = (address) => this.setState({ address });
