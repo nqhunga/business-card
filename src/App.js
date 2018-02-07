@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import {
   HashRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom'
 import database from './database';
 import './App.css';

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Card, CardTitle, CardText, CardSubtitle, CardColumns } from 'reactstrap';
+import { Card, CardTitle, CardText, CardSubtitle} from 'reactstrap';
 import FlipCard from 'react-flipcard-2';
 
 export const CardEx = styled(FlipCard)`

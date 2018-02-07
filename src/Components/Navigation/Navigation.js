@@ -1,7 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { CollapseEx, NavbarEx, NavbarTogglerEx, NavbarBrandEx, NavEx, NavItemEx, NavLinkEx, LinkEx } from './Navigation.style';
-import {Link} from 'react-router-dom';
+import { CollapseEx, NavbarEx, NavbarTogglerEx, NavbarBrandEx, NavEx, NavItemEx, LinkEx } from './Navigation.style';
 
 class Navigation extends React.Component {
   constructor(props) {

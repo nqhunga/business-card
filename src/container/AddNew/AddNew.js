@@ -1,14 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import { ButtonEx, FormEx, FormGroupEx,
   LabelEx, InputEx, ColEx } from './AddNew.style';
 import PlacesAutocomplete from 'react-places-autocomplete'
 import TagsInput from 'react-tagsinput';
 import 'react-tagsinput/react-tagsinput.css';
-import { AvForm, AvField,
-        AvGroup, AvInput,
-        AvFeedback, AvRadioGroup,
-        AvRadio } from 'availity-reactstrap-validation';
 import {FormErrors} from './FormErrors';
 
 class AddNew extends React.Component {

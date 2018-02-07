@@ -1,8 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { TableEx, ButtonEx, ButtonGroupEx, InputEx } from './ListPeople.style';
+import {  ButtonEx, ButtonGroupEx, InputEx } from './ListPeople.style';
 import PlacesAutocomplete from 'react-places-autocomplete'
-import emailPropTypes from 'email-prop-type';
+
 
 
 class RowContainer extends React.Component {

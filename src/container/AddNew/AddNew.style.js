@@ -1,8 +1,4 @@
-import { Button, Form, FormGroup, Label, Input, FormText, Col, FormFeedback, Alert} from 'reactstrap';
-import { AvForm, AvField,
-        AvGroup, AvInput,
-        AvFeedback, AvRadioGroup,
-        AvRadio } from 'availity-reactstrap-validation';
+import { Button, Form, FormGroup, Label, Input, Col, Alert} from 'reactstrap';
 import styled from 'styled-components';
 
 export const FormEx = styled(Form)`

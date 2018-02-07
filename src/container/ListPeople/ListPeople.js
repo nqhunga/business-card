@@ -1,9 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import PlacesAutocomplete from 'react-places-autocomplete';
-import { TableEx, ButtonEx, ButtonGroupEx, InputEx } from './ListPeople.style';
+import { TableEx } from './ListPeople.style';
 import RowContainer from './RowContainer';
-import Editable from './Editable';
 
 
 class ListPeople extends React.Component {
@@ -35,11 +32,5 @@ class ListPeople extends React.Component {
   }
 }
 
-ListPeople.propTypes = {
-  // Add proptypes here for validation
-  person: PropTypes.shape({
-    firstName: PropTypes.string.isRequired
-  })
-}
 
 export default ListPeople;
